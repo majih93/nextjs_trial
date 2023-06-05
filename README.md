@@ -2,22 +2,23 @@
 
 ## Folder Structure Guides
 
-`layout.tsx` 
+`layout.tsx`
+
 - main entry point of the application
 - provides a common layout, or template for all the pages in the app
 - -> checkout more on the NextJS document
 
-
 `page.tsx`
+
 - This is the homepage for the application.
 
 `globals.css`
-- style to be applied for all pages in the app
 
+- style to be applied for all pages in the app
 
 ## Client Components vs Server Components
 
-React 18 and Next 13 introduced Server Components 
+React 18 and Next 13 introduced Server Components
 
 Server Components are rendered in the Server
 
@@ -67,12 +68,11 @@ The NextJS version
 
 create a directory with the name in the form of `[postId]` and just like other cases create a `page.js` or `page.tsx`
 
-Additionally, you can also add a `layout.js` file for every sub-directory for the app directory. 
+Additionally, you can also add a `layout.js` file for every sub-directory for the app directory.
 
 Also, you can add a `loading.js` file, which is responsible for holding a View code which is going be shown for a loading process. -> While the `page.js` is being rendered, the contents in the `loading.js` file is going to be displayed.
 
 What if an error occurs? You can create an `error.js` file, which is going to be shown in case of errors. ( Error components must be client components. Why? Because errors happen in the Client Side...! )
-
 
 ## Data Fetching
 
@@ -95,18 +95,21 @@ In the traditional way, if I were to create a express API endpoint, I'd have to.
 - create an endpoint
 - make the server listen to a specifit port ( because this is a server that has to be alive to listen to incoming requests)
 
-
 There are 2 diffrent ways to create a route handler in NextJS.
 
 1. create route handler directory inside the api directory
    - `api/users/route.js` -> `http://localhost:3000/api/users`
 2. create a direct route handler inside the app directory's folders.
-   - for this, you have to create a special `route.js` file 
+   - for this, you have to create a special `route.js` file
    - however, this way has restrictions because you cannot create the same route names for app page routing and API endpoints (NextJS is not able to find out what is what)
    - So, this guy recommends going for the first way.
-
-
 
 ## How to improve SEO with NextJS
 
 There are two ways to define Metadata: Static vs. Dynamic
+
+## NextAuth
+
+To learn more about the way authentication is implemented, checkout the official docs
+
+[NextAuth.js](https://next-auth.js.org/getting-started/introduction)
