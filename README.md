@@ -88,3 +88,25 @@ NextJS provides three choices for data fetching.
 How can I utilize the Full Stack capabilities NextJS provides?
 -> Serverless Route handlers
 
+In the traditional way, if I were to create a express API endpoint, I'd have to...
+
+- install express
+- import express
+- create an endpoint
+- make the server listen to a specifit port ( because this is a server that has to be alive to listen to incoming requests)
+
+
+There are 2 diffrent ways to create a route handler in NextJS.
+
+1. create route handler directory inside the api directory
+   - `api/users/route.js` -> `http://localhost:3000/api/users`
+2. create a direct route handler inside the app directory's folders.
+   - for this, you have to create a special `route.js` file 
+   - however, this way has restrictions because you cannot create the same route names for app page routing and API endpoints (NextJS is not able to find out what is what)
+   - So, this guy recommends going for the first way.
+
+
+
+## How to improve SEO with NextJS
+
+There are two ways to define Metadata: Static vs. Dynamic
