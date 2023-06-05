@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Dispatch, FormEvent, FormEventHandler, SetStateAction } from "react";
+import { Dispatch, FormEventHandler, SetStateAction } from "react";
 
 interface IProps {
   type: string;
